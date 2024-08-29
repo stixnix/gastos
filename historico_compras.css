@@ -1,0 +1,138 @@
+/* Estilo geral para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Container principal */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho principal */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Cabeçalho de cada mês */
+h3 {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* Estilo das tabelas */
+.historico-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+/* Cabeçalho das tabelas */
+.historico-table th {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #0056b3;
+}
+
+/* Linhas das tabelas */
+.historico-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Estilo das linhas alternadas */
+.historico-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilo para o valor total */
+.total-row {
+    background-color: #e9ecef;
+    font-weight: bold;
+}
+
+/* Navegação entre meses */
+.navigation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    margin: 0 5px;
+    border-radius: 4px;
+}
+
+.navigation a:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo dos botões de ação */
+.btn-editar, .btn-excluir, .btn-voltar {
+    padding: 8px 12px;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btn-editar {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-excluir {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-voltar {
+    display: block;
+    width: 200px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    margin: 20px auto;
+}
+
+.btn-editar:hover, .btn-excluir:hover, .btn-voltar:hover {
+    opacity: 0.8;
+}
+
+/* Mensagem de confirmação */
+.mensagem {
+    color: #28a745;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.navigation .disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 4px;
+    background-color: #e0e0e0;
+    display: inline-block;
+}
