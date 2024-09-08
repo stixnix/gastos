@@ -14,8 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $valor_total = $_POST['valor']; // Valor total da compra
     $forma_pagamento_id = $_POST['forma_pagamento'];
     $parcelas = $_POST['parcelas'] ? $_POST['parcelas'] : 1; // Definir parcelas como 1 se estiver vazio
-    $local_compra = $_POST['local_compra'];
-    $observacoes = $_POST['observacoes'];
+
 
     // Verificar se o número de parcelas é maior que 1
     if ($parcelas > 1) {
@@ -25,11 +24,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Inserir a compra na tabela registro_compras, incluindo o valor de cada parcela
-    $sql = "INSERT INTO registro_compras (data_compra, descricao, categoria_id, valor, valor_parcela, forma_pagamento_id, parcelas, local_compra, observacoes) 
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO registro_compras (data_compra, descricao, categoria_id, valor, valor_parcela, forma_pagamento_id, parcelas) 
+    VALUES (?, ?, ?, ?, ?, ?, ?)";
+
 
     if ($stmt = $conn->prepare($sql)) {
-        $stmt->bind_param("ssisdisss", $data_compra, $descricao, $categoria_id, $valor_total, $valor_parcela, $forma_pagamento_id, $parcelas, $local_compra, $observacoes);
+        $stmt->bind_param("ssiddsi", $data_compra, $descricao, $categoria_id, $valor_total, $valor_parcela, $forma_pagamento_id, $parcelas,);
 
         // Executar a consulta
         if ($stmt->execute()) {

@@ -65,7 +65,7 @@ LEFT JOIN categorias cat ON rc.categoria_id = cat.id
 LEFT JOIN formas_pagamento fp ON rc.forma_pagamento_id = fp.id
 WHERE (MONTH(pc.mes_parcela) = ? AND YEAR(pc.mes_parcela) = ?)
    OR (pc.mes_parcela IS NULL AND MONTH(rc.data_compra) = ? AND YEAR(rc.data_compra) = ?)
-ORDER BY pc.mes_parcela ASC, rc.data_compra ASC";
+ORDER BY rc.data_compra ASC";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("iiii", $mes_atual, $ano_atual, $mes_atual, $ano_atual);
 $stmt->execute();

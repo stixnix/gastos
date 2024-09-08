@@ -19,13 +19,13 @@
 
         <form action="processa_registro.php" method="POST">
             <label for="data_compra">Data da Compra:</label>
-            <input type="date" id="data_compra" name="data_compra" required>
+            <input type="date" id="data_compra" name="data_compra" >
 
             <label for="descricao">Descrição:</label>
-            <input type="text" id="descricao" name="descricao" required>
+            <input type="text" id="descricao" name="descricao" >
 
             <label for="categoria">Categoria:</label>
-            <select id="categoria" name="categoria" required>
+            <select id="categoria" name="categoria" >
                 <?php
                 include 'conexao.php';
 
@@ -46,10 +46,10 @@
             <a href="gerenciar_categorias.php">Gerenciar Categorias</a>
 
             <label for="valor">Valor:</label>
-            <input type="number" id="valor" name="valor" step="0.01" required>
+            <input type="number" id="valor" name="valor" step="0.01" >
 
             <label for="forma_pagamento">Forma de Pagamento:</label>
-            <select id="forma_pagamento" name="forma_pagamento" required>
+            <select id="forma_pagamento" name="forma_pagamento" >
                 <?php
                 include 'conexao.php';
 
@@ -71,12 +71,6 @@
 
             <label for="parcelas">Número de Parcelas:</label>
             <input type="number" id="parcelas" name="parcelas" min="1">
-
-            <label for="local_compra">Local da Compra:</label>
-            <input type="text" id="local_compra" name="local_compra">
-
-            <label for="observacoes">Observações:</label>
-            <textarea id="observacoes" name="observacoes"></textarea>
 
             <button type="submit">Registrar Compra</button>
         </form>

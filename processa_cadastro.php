@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($conn->query($sql) === TRUE) {
             // Redirecionar para a tela registro.php
-            header("Location: registro.php");
+            header("Location: login.html");
             exit(); // Termina a execução do script após o redirecionamento
         } else {
             $mensagem = "Erro ao cadastrar: " . $conn->error;
