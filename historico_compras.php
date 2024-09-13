@@ -101,17 +101,19 @@ $stmt->close();
         <!-- Navegação entre meses -->
         <div class="navigation">
             <?php if ($tem_registros_anterior): ?>
-                <a href="?mes=<?php echo $mes_anterior; ?>&ano=<?php echo $ano_anterior; ?>">&#9664; Mês Anterior</a>
+                <a href="?mes=<?php echo $mes_anterior; ?>&ano=<?php echo $ano_anterior; ?>">&#9664; Mês anterior</a>
             <?php else: ?>
                 <span class="disabled">&#9664; Mês Anterior</span>
             <?php endif; ?>
 
             <?php if ($tem_registros_seguinte): ?>
-                <a href="?mes=<?php echo $mes_seguinte; ?>&ano=<?php echo $ano_seguinte; ?>">Próximo Mês &#9654;</a>
+                <a href="?mes=<?php echo $mes_seguinte; ?>&ano=<?php echo $ano_seguinte; ?>">Próximo mês &#9654;</a>
             <?php else: ?>
-                <span class="disabled">Próximo Mês &#9654;</span>
+                <span class="disabled">Próximo mês &#9654;</span>
             <?php endif; ?>
         </div>
+        <br>
+        
 
         <!-- Tabela para o mês atual -->
         <?php if (count($historico) > 0): ?>
@@ -165,8 +167,13 @@ $stmt->close();
             <p>Nenhum registro encontrado para este mês.</p>
         <?php endif; ?>
 
-        <!-- Botão para voltar ao registro -->
-        <a href="registro.php" class="btn-voltar">Voltar ao Registro</a>
+       <!-- Botões centralizados -->
+<div class="buttons-container">
+    <a href="registro.php" class="btn-voltar">Voltar ao registro</a>
+    <a href="dashboard.php" class="btn-voltar">Voltar página inicial</a>
+    <a href="login.html" class="btn-voltar">Sair</a>
+</div>
+
     </div>
 </body>
 </html>

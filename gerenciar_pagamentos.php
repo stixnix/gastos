@@ -55,11 +55,11 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>Gerenciar Formas de Pagamento</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pagamento.css">
 </head>
 <body>
     <div class="container">
-        <h2>Gerenciar Formas de Pagamento</h2>
+        <h2>Criar Formas de Pagamento</h2>
         
         <!-- Mensagem de feedback -->
         <?php if ($mensagem): ?>
@@ -72,6 +72,7 @@ $result = $conn->query($sql);
             <input type="text" id="nova_forma_pagamento" name="nova_forma_pagamento" required>
             <button type="submit">Adicionar Forma de Pagamento</button>
         </form>
+        <br>
 
         <!-- Lista de formas de pagamento existentes -->
         <h3>Formas de Pagamento Existentes</h3>

@@ -1,0 +1,165 @@
+/* Estilos unificados */
+
+/* Reset de margem e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Corpo com background escuro e centralização de conteúdo */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000000;
+    overflow: hidden;
+    position: relative;
+    padding: 20px; /* Adiciona um pouco de espaçamento ao redor do corpo */
+    margin: 0; /* Remove a margem padrão do body */
+}
+
+/* Container principal */
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Reduz a largura máxima para evitar expansão excessiva */
+    padding: 22px; /* Reduz o padding interno */
+    background: rgba(255, 255, 255, .15);
+    box-shadow: 0 8px 32px rgba(37, 89, 31, 0.299);
+    border: 1px solid rgba(255, 255, 255, .15);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    margin-top: 2px; /* Ajusta a margem superior para subir o container */
+}
+
+/* Estilo do título */
+h2 {
+    font-size: 1.8em; /* Reduz o tamanho do título */
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5em; /* Tamanho do subtítulo */
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Estilo das caixas de entrada */
+form {
+    width: 100%;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+    width: calc(100% - 20px); /* Reduz a largura para acomodar padding e bordas */
+    height: 40px; /* Reduz a altura dos campos */
+    background-color: #fff; /* Fundo branco */
+    color: #000; /* Texto preto */
+    border: 2px solid #ddd; /* Borda cinza clara */
+    border-radius: 8px;
+    padding: 0 10px;
+    margin-bottom: 10px; /* Reduz a margem inferior */
+}
+
+/* Remove setas do input number */
+input[type="number"] {
+    -moz-appearance: textfield; /* Remover setas no número */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Estilo das labels */
+label {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+/* Botões */
+button {
+    width: 100%;
+    height: 40px; /* Reduz a altura do botão */
+    background: #30712b;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 10px;
+    padding: 0 10px; /* Adiciona padding interno */
+    box-sizing: border-box; /* Garante que o padding não cause quebra no layout */
+}
+
+button:hover {
+    background-color: #253d25;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    color: #fff;
+}
+
+table th {
+    background-color: #30712b; /* Fundo verde escuro para cabeçalho da tabela */
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1); /* Alterna fundo das linhas da tabela */
+}
+
+/* Links */
+a {
+    display: block;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 20px; /* Aumenta a margem superior para espaçamento */
+    font-size: 1em;
+    background-color: #30712b; /* Cor do fundo do link */
+    padding: 12px 20px; /* Padding do botão */
+    border-radius: 20px;
+    width: fit-content; /* Ajusta a largura do botão ao conteúdo */
+}
+
+a:hover {
+    background-color: #253d25;
+    text-decoration: underline;
+}
+
+/* Mensagem de feedback */
+p {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 15px; /* Reduz a margem inferior */
+    background: rgba(0, 255, 0, 0.2); /* Leve fundo verde para destacar */
+}

@@ -55,11 +55,11 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>Gerenciar Categorias</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="categorias.css">
 </head>
 <body>
     <div class="container">
-        <h2>Gerenciar Categorias</h2>
+        <h2>Criar Categorias</h2>
         
         <!-- Mensagem de feedback -->
         <?php if ($mensagem): ?>
@@ -69,10 +69,12 @@ $result = $conn->query($sql);
         <!-- Formulário para adicionar nova categoria -->
         <form action="gerenciar_categorias.php" method="POST">
             <label for="nova_categoria">Nova Categoria:</label>
+            <br>
+            <br>
             <input type="text" id="nova_categoria" name="nova_categoria" required>
-            <button type="submit">Adicionar Categoria</button>
+            <button type="submit">Adicionar categoria</button>
         </form>
-
+          <br>
         <!-- Lista de categorias existentes -->
         <h3>Categorias Existentes</h3>
         <table>

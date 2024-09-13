@@ -83,12 +83,16 @@ $conn->close();
     <div class="dashboard-container">
         <!-- Menu lateral -->
         <div class="menu-lateral">
+            <!-- Logo -->
+            <div class="logo-container">
+            <img src="src/imagem/5.png" alt="Logo YME" class="logo">
+            </div>
+
             <h2>Menu</h2>
             <ul>
                 <li><a href="registro.php">Registrar Nova Compra</a></li>
                 <li><a href="historico_compras.php">Histórico de Compras</a></li>
                 <li><a href="logout.php" class="logout-button">Sair</a></li> <!-- Botão de Logout -->
-
             </ul>
         </div>
 
@@ -105,7 +109,7 @@ $conn->close();
             <div class="container-flex">
                 <!-- Gastos por Categoria -->
                 <div class="flex-item gastos-categoria">
-                    <h2>Gastos por Categoria</h2>
+                    <h2>Gastos por categoria</h2>
                     <?php while ($row = $result_categorias->fetch_assoc()): ?>
                         <div class="card">
                             <h3><?php echo htmlspecialchars($row['categoria']); ?></h3>
@@ -116,7 +120,7 @@ $conn->close();
 
                 <!-- Gastos por Forma de Pagamento -->
                 <div class="flex-item gastos-pagamento">
-                    <h2>Gastos por Forma de Pagamento</h2>
+                    <h2>Gastos por forma de pagamento</h2>
                     <?php while ($row = $result_pagamento->fetch_assoc()): ?>
                         <div class="card">
                             <h3><?php echo htmlspecialchars($row['forma_pagamento']); ?></h3>

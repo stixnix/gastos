@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Compras</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <br>
     <div class="container">
         <h2>Registrar Nova Compra</h2>
 
@@ -19,13 +20,13 @@
 
         <form action="processa_registro.php" method="POST">
             <label for="data_compra">Data da Compra:</label>
-            <input type="date" id="data_compra" name="data_compra" >
+            <input type="date" id="data_compra" name="data_compra" required>
 
             <label for="descricao">Descrição:</label>
-            <input type="text" id="descricao" name="descricao" >
+            <input type="text" id="descricao" name="descricao" required>
 
             <label for="categoria">Categoria:</label>
-            <select id="categoria" name="categoria" >
+            <select id="categoria" name="categoria" required>
                 <?php
                 include 'conexao.php';
 
@@ -43,13 +44,13 @@
                 $conn->close();
                 ?>
             </select>
-            <a href="gerenciar_categorias.php">Gerenciar Categorias</a>
+            <a href="gerenciar_categorias.php">Cadastrar categorias</a>
 
             <label for="valor">Valor:</label>
-            <input type="number" id="valor" name="valor" step="0.01" >
+            <input type="number" id="valor" name="valor" step="0.01" required >
 
             <label for="forma_pagamento">Forma de Pagamento:</label>
-            <select id="forma_pagamento" name="forma_pagamento" >
+            <select id="forma_pagamento" name="forma_pagamento" required>
                 <?php
                 include 'conexao.php';
 
@@ -67,8 +68,8 @@
                 $conn->close();
                 ?>
             </select>
-            <a href="gerenciar_pagamentos.php">Gerenciar Formas de Pagamento</a>
-
+            <a href="gerenciar_pagamentos.php">Cadastrar formas de pagamento</a>
+           <br>
             <label for="parcelas">Número de Parcelas:</label>
             <input type="number" id="parcelas" name="parcelas" min="1">
 

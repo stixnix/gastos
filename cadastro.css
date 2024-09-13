@@ -1,0 +1,96 @@
+/* Reset de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo do corpo */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+}
+
+/* Container central para o formulário */
+.container {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente preto */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 30px;
+    width: 400px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: relative;
+}
+
+/* Título */
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Labels e inputs */
+label {
+    display: block;
+    text-align: left;
+    margin: 15px 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff; /* Texto branco */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Removendo a cor de fundo amarela dos campos de entrada */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #30712b;
+    background-color: #fff; /* Mantendo o fundo branco */
+}
+
+/* Botão de envio */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #30712b;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #20521d;
+}
+
+/* Link de login */
+a {
+    color: #fff;
+    text-decoration: none;
+    margin-top: 15px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}

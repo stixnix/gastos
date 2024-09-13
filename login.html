@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login de Usuário</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="src/imagem/financiamento-colaborativo (1).png" type="image/x-icon">
 </head>
 <body>
-    <div class="container">
+    <img src="src/imagem/5.png" alt="Logo YME" class="logo">
+    
+    <div class="blob"></div>
+    <div class="wrapper">
         <h2>Login</h2>
         
         <!-- Área para exibir mensagens -->
@@ -18,18 +22,31 @@
         <?php } ?>
 
         <!-- Formulário de Login -->
-        <form action="processa_login.php" method="POST">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required>
-
-            <button type="submit">Entrar</button>
-        </form>
-        
-        <!-- Botão para Cadastro -->
-        <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+       <!-- Formulário de Login -->
+<form action="processa_login.php" method="POST">
+    <div class="input-box">
+        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+        <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+        <label>Email</label>
     </div>
+
+    <div class="input-box">
+        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+        <label>Senha</label>
+    </div>
+
+    <button type="submit">Entrar</button>
+</form>
+
+        <!-- Link para Cadastro -->
+        <div class="register-link">
+            <p>Novo por aqui? <a href="cadastro.html">Faça seu registro</a></p>
+        </div>
+    </div>
+
+    <!-- Scripts para ícones -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

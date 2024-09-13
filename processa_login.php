@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Verificar se a senha está correta
         if (password_verify($senha, $usuario['senha'])) {
             // Login bem-sucedido, redirecionar para registro.html
-            header("Location: registro.php");
+            header("Location: dashboard.php");
             exit;
         } else {
             $mensagem = "Senha incorreta.";
